@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>msgbox/mmsgbox.png</file>
+        <file>msgbox/mmsgbox.css</file>
+        <file>mainwindows.css</file>
+        <file>waitbox/mwaitbox.gif</file>
+        <file>waitbox/mwaitbox.png</file>
+    </qresource>
+</RCC>

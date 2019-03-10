@@ -1,0 +1,11 @@
+QLabel {
+	color: #000;
+	font: 16px;
+}
+
+QLineEdit {
+	color: #000;
+	font: 16px;
+	border: 1px solid #e6e6e6;
+	border-radius: 5px;
+}

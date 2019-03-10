@@ -1,0 +1,60 @@
+QWidget#MMBTitleBar {
+	background: #232126;
+}
+
+QLabel#MMBTitle {
+	color: #fff;
+	font: 16px;
+}
+
+QWidget#MMBBody {
+	border: 1px solid #232126;
+}
+
+QWidget#MMBBodyContent {
+	background: #fff;
+}
+
+QLabel#MMBBodyText {
+	color: #000;
+	font: 16px;
+}
+
+QWidget#MMBBtnBox {
+	background: #C3C3C3;
+}
+
+QPushButton#MMBBtnClose {
+	border: none;
+}
+
+QPushButton#MMBBtnClose:hover {
+	background: #444348;
+}
+
+QPushButton#MMBBtnClose:pressed {
+	background: red;
+}
+
+QPushButton#MMBBtnCancel {
+	color: #ff4604;
+	border: 1px solid #ff4604;
+	font-size: 14px;
+	border-radius: 5px;
+}
+
+QPushButton#MMBBtnAffirm {
+	color: #fff;
+	border: none;
+	font-size: 14px;
+	border-radius: 5px;
+	background: #ff4604;
+}
+
+QPushButton:hover {
+	padding: 0 5px 5px 0;
+}
+
+QPushButton:pressed {
+	padding: 0 0 0 0;
+}
