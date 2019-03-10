@@ -1,6 +1,13 @@
 自己用的一些qt窗口类的封装  
 
-# 目录  
+# 使用  
+
+1. 把`dist`目录里的文件包含到当前项目中  
+2. 把`dist/msgbox/mmsgbox.h`里面的`MMB_IMGFILE`和`MMB_QSSFILE`修改成正确的目录  
+3. 把`dist/waitbox/mwaitbox.h`里面的`MWB_IMGFILE`和`MWB_GIFFILE`修改成正确的目录  
+
+
+# 文档  
 
 > * [I、MMsgBox](#one)  
 > * [II、MWaitBox](#two)  
