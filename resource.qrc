@@ -1,10 +1,10 @@
 <RCC>
     <qresource prefix="/">
-        <file>msgbox/mmsgbox.png</file>
-        <file>msgbox/mmsgbox.css</file>
-        <file>mainwindows.css</file>
-        <file>waitbox/mwaitbox.gif</file>
-        <file>waitbox/mwaitbox.png</file>
+        <file>dist/msgbox/mmsgbox.png</file>
+        <file>dist/msgbox/mmsgbox.css</file>
+        <file>dist/waitbox/mwaitbox.gif</file>
+        <file>dist/waitbox/mwaitbox.png</file>
         <file>other/ico.icns</file>
+        <file>test/mainwindows.css</file>
     </qresource>
 </RCC>

@@ -7,8 +7,8 @@
 #include <QMouseEvent>
 #include <QDebug>
 
-#define MWB_IMGFILE ":/waitbox/mwaitbox.png"
-#define MWB_GIFFILE ":/waitbox/mwaitbox.gif"
+#define MWB_IMGFILE ":/dist/waitbox/mwaitbox.png"
+#define MWB_GIFFILE ":/dist/waitbox/mwaitbox.gif"
 
 namespace Ui {
 class MWaitBox;

@@ -12,7 +12,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    QFile file(":/mainwindows.css");
+    QFile file(":/test/mainwindows.css");
     file.open(QIODevice::ReadOnly);
     this->setStyleSheet(file.readAll());
 }

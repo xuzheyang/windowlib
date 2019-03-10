@@ -25,24 +25,24 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 INCLUDEPATH += \
-	msgbox \
-	waitbox
+	dist/msgbox \
+	dist/waitbox
 
 SOURCES += \
-        main.cpp \
-        mainwindow.cpp \
-        msgbox/mmsgbox.cpp \
-        waitbox/mwaitbox.cpp
+        test/main.cpp \
+        test/mainwindow.cpp \
+        dist/msgbox/mmsgbox.cpp \
+        dist/waitbox/mwaitbox.cpp
 
 HEADERS += \
-        mainwindow.h \
-        msgbox/mmsgbox.h \
-        waitbox/mwaitbox.h
+        test/mainwindow.h \
+        dist/msgbox/mmsgbox.h \
+        dist/waitbox/mwaitbox.h
 
 FORMS += \
-        mainwindow.ui \
-        msgbox/mmsgbox.ui \
-        waitbox/mwaitbox.ui
+        test/mainwindow.ui \
+        dist/msgbox/mmsgbox.ui \
+        dist/waitbox/mwaitbox.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -50,4 +50,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-        resource.qrc
+	resource.qrc

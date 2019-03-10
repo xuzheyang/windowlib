@@ -4,8 +4,8 @@
 #include <QDialog>
 #include <QMouseEvent>
 
-#define MMB_IMGFILE ":/msgbox/mmsgbox.png"  // 图片所在位置
-#define MMB_QSSFILE ":/msgbox/mmsgbox.css"  // 样式所在位置
+#define MMB_IMGFILE ":/dist/msgbox/mmsgbox.png"  // 图片所在位置
+#define MMB_QSSFILE ":/dist/msgbox/mmsgbox.css"  // 样式所在位置
 
 namespace Ui {
 class MMsgBox;
