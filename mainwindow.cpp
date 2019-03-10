@@ -49,7 +49,7 @@ void MainWindow::on_MBLineBtnShow_clicked()
         button = (button | MMsgBox::MMsgBoxButtonClose);
     }
 
-    MMsgBox *box = new MMsgBox(nullptr, title, text, "", type, button);
+    MMsgBox *box = new MMsgBox(nullptr, title, text, ":/other/ico.icns", type, button);
     box->exec();
 }
 
@@ -68,6 +68,6 @@ void MainWindow::on_WBLineBtnShow_clicked()
     QString text = ui->WBLineEditText->text();
 
     MWaitBox *box = new MWaitBox(this, text, 2, type);
-    connect(this, SIGNAL(resetGeometry(int, int, int, int)), box, SLOT(onResize(int, int, int, int)));
+//    connect(this, SIGNAL(resetGeometry(int, int, int, int)), box, SLOT(onResize(int, int, int, int)));
     box->show();
 }
