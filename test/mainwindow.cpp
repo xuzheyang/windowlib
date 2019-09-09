@@ -67,7 +67,8 @@ void MainWindow::on_WBLineBtnShow_clicked()
 
     QString text = ui->WBLineEditText->text();
 
-    MWaitBox *box = new MWaitBox(this, text, 2, type);
+    MWaitBox *box = MWaitBox::GetInstance(this);
+//    MWaitBox *box = new MWaitBox(this, text, 2, type);
 //    connect(this, SIGNAL(resetGeometry(int, int, int, int)), box, SLOT(onResize(int, int, int, int)));
-    box->show();
+    box->Show(text, 2, type);
 }

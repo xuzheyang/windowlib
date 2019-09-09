@@ -1,11 +1,11 @@
 #ifndef MWAITBOX_H
 #define MWAITBOX_H
 
-#include <QWidget>
 #include <QTimer>
 #include <QMovie>
-#include <QMouseEvent>
 #include <QDebug>
+#include <QWidget>
+#include <QMouseEvent>
 
 #define MWB_IMGFILE ":/dist/waitbox/mwaitbox.png"
 #define MWB_GIFFILE ":/dist/waitbox/mwaitbox.gif"
@@ -28,17 +28,25 @@ public:
     };
 
     /**
-     * @brief MWaitBox - 等待窗口
-     * @param parent: 父窗口类型
-     * @param text: 提示信息
-     * @param timeout: 自动关闭时间，单位为秒，默认不关闭
-     * @param type: 类型，参见 MWaitBox::MWaitBoxType
-     *
-     * 类型的表示方式也是图标
+     * @brief GetInstance - 获取单实例
+     * @param parent: 父类
+     * @return 返回单实例
      */
-    explicit MWaitBox(QWidget *parent = nullptr, QString text = "", int timeout = 0,
-                      MWaitBox::MWaitBoxType type = MWaitBox::MWaitBoxTypeWait);
-    ~MWaitBox();
+    static MWaitBox *GetInstance(QWidget *parent = nullptr);
+
+
+    /**
+     * @brief Show - 显示窗口
+     * @param text: 显示的内容
+     * @param timeout: 窗口显示的时间, 单位秒, 默认不关闭
+     * @param type: 窗口的类型, 默认为等待窗口
+     */
+    void Show(QString text = "", int timeout = 0, MWaitBox::MWaitBoxType type = MWaitBox::MWaitBoxTypeWait);
+
+    /**
+     * @brief Hide - 隐藏窗口
+     */
+    void Hide();
 
     /**
      * @brief SetText - 设置提示信息
@@ -65,10 +73,28 @@ private slots:
     void onTimerTimeout();
 
 private:
+    /**
+     * @brief MWaitBox - 等待窗口
+     * @param parent: 父窗口类型
+     * @param text: 提示信息
+     * @param timeout: 自动关闭时间，单位为秒，默认不关闭
+     * @param type: 类型，参见 MWaitBox::MWaitBoxType
+     *
+     * 类型的表示方式也是图标
+     */
+    explicit MWaitBox(QWidget *parent = nullptr, QString text = "", int timeout = 0,
+                      MWaitBox::MWaitBoxType type = MWaitBox::MWaitBoxTypeWait);
+    ~MWaitBox();
+
+    /**
+     * @brief synctime - 同步定时器时间
+     * @param sec: 定时时间，单位为秒
+     */
     void synctime(int sec);
 
 private:
     Ui::MWaitBox *ui;
+    MWaitBox *_this;
     QTimer *timer;
     QMovie *movie;
 };

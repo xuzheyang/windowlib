@@ -1,6 +1,27 @@
 #include "mwaitbox.h"
 #include "ui_mwaitbox.h"
 
+MWaitBox *MWaitBox::GetInstance(QWidget *parent) {
+    static MWaitBox *_this = nullptr;
+    if (!_this) {
+        _this = new MWaitBox(parent);
+    }
+    return _this;
+}
+
+void MWaitBox::Show(QString text, int timeout, MWaitBox::MWaitBoxType type)
+{
+    this->SetText(text);
+    this->SetTimeout(timeout);
+    this->SetType(type);
+    this->show();
+}
+
+void MWaitBox::Hide()
+{
+    this->hide();
+}
+
 MWaitBox::MWaitBox(QWidget *parent, QString text, int timeout,
                    MWaitBox::MWaitBoxType type) :
     QWidget(parent),
@@ -43,10 +64,12 @@ MWaitBox::~MWaitBox()
 
 void MWaitBox::SetText(QString text)
 {
-    if (text.isEmpty())
+    if (text.isEmpty()) {
         ui->MWBText->hide();
-    else
+    } else {
+        ui->MWBText->show();
         ui->MWBText->setText(text);
+    }
 }
 
 void MWaitBox::SetType(MWaitBox::MWaitBoxType type)
